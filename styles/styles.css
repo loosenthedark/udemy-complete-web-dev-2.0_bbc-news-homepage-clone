@@ -1,0 +1,170 @@
+body, body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+body {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+nav {
+  height: 33px;
+  color: #333;
+  font-size: 13px;
+  font-weight: bold;
+  max-width: 100%;
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+  min-width: 320px;
+}
+
+nav img#navbar-logo {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  margin-right: 8px;
+}
+
+div#nav-logo {
+  display: inline-block;
+  height: 33px;
+  width: 91px;
+  border-right: 1px solid lightgrey;
+}
+
+#empty-nav-div-left,
+#empty-nav-div-right {
+  display: inline-block;
+  height: 33px;
+  min-width: 5px;
+  width: 8%;
+}
+#nav-link-triangle-1 {
+  position: absolute;
+  top: 11px;
+  left: -4px;
+  z-index: 1;
+  border-left: 6px solid #ccc;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+#nav-link-triangle-2 {
+  position: absolute;
+  top: 12px;
+  left: -5px;
+  z-index: 2;
+  border-left: 5px solid #fff;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+#empty-nav-div-left {
+  border-right: 1px solid lightgrey;
+}
+#empty-nav-div-right {
+  position: relative;
+}
+
+nav ul {
+  height: 33px;
+  position: absolute;
+  right: 8px;
+  display: inline-block;
+  min-width: 170px;
+}
+
+@media only screen and (min-width: 768px) {
+  nav ul {
+    min-width: 600px;
+  }
+}
+
+nav ul li {
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+  border-left: 1px solid lightgrey;
+  height: 33px;
+  padding-top: 9px;
+  padding-left: 8px;
+  padding-right: 6px;
+  min-width: 52px;
+  float: left;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+}
+
+nav ul li#sport-link:hover {
+  border-bottom: 4px solid #fe1;
+}
+
+nav ul li#news-link:hover {
+  border-bottom: 4px solid #921;
+}
+
+nav ul li#weather-link:hover {
+  border-bottom: 4px solid #8ce;
+}
+nav ul li#iPlayer-link:hover {
+  border-bottom: 4px solid #ed3d7d;
+}
+
+nav ul li#tv-link:hover,
+nav ul li#radio-link:hover,
+nav ul li#more-link:hover
+ {
+  border-bottom: 4px solid #262626;
+}
+
+@media only screen and (max-width: 600px) {
+  nav ul li#weather-link,
+  nav ul li#iPlayer-link,
+  nav ul li#tv-link,
+  nav ul li#radio-link {
+    display: none;
+  }
+}
+
+nav ul li:nth-of-type(7) {
+  padding-right: 27px;
+}
+
+@media only screen and (max-width: 374px) {
+  nav ul li:nth-of-type(7) {
+    padding-right: 6px;
+  } 
+}
+
+nav.navbar-link li a {
+  height: 33px;
+}
+
+nav ul li:last-of-type {
+  top: 0;
+  border-right: 1px solid lightgrey;
+  width: 18%;
+  padding-left: 8px;
+  padding-bottom: 10px;
+  min-width: 40px;
+}
+nav ul li:last-of-type a img {
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+#header-divider {
+  min-height: 56px;
+  position: relative;
+  background-color: #bb1919;
+}
