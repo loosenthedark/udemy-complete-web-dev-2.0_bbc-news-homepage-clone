@@ -37,6 +37,12 @@ h3 {
   font-weight: 400;
 }
 
+#special-reports h3 {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 h4 {
   font-size: 15px;
   padding-bottom: 6px;
@@ -70,9 +76,17 @@ a {
 .mini-story-caption a,
 #ces-heading a,
 .ces-story a,
-#also-heading,
-.experts-speech-bubble a {
+.experts-speech-bubble a,
+#click-heading a,
+#share a {
   color: #222;
+}
+#also-heading,
+#features-heading,
+#experts-heading,
+#special-reports-heading,
+#share-heading {
+  color: #404040;
 }
 .story-link a:visited,
 .story-caption a:visited,
@@ -339,7 +353,10 @@ img.story-img {
 .mini-story-caption a:hover,
 #ces-heading a:hover,
 .ces-story a:hover,
-.experts-speech-bubble a:hover {
+.experts-speech-bubble a:hover,
+#click-heading a:hover,
+#share a:hover,
+.share-list-item a:hover {
   color: #1167a8;
 }
 
@@ -368,7 +385,10 @@ img#drone-img {
 #ces-heading,
 #also-heading,
 #features-heading,
-#experts-heading {
+#experts-heading,
+#click-heading,
+#special-reports-heading,
+#share-heading {
   width: 95%;
   font-size: 20px;
   font-weight: 400;
@@ -380,7 +400,10 @@ img#drone-img {
 
 #also-heading,
 #features-heading,
-#experts-heading {
+#experts-heading,
+#click-heading,
+#special-reports-heading,
+#share-heading {
   margin: 20px 2.5% 10px;
 }
 
@@ -402,13 +425,18 @@ img#drone-img {
 /* Also */
 
 #also,
-#features {
+#features,
+#click,
+#special-reports {
   margin-bottom: 32px;
 }
 
 #also-heading,
 #features-heading,
-#experts-heading {
+#experts-heading,
+#click-heading,
+#special-reports-heading,
+#share-heading {
   letter-spacing: 0;
 }
 
@@ -496,6 +524,122 @@ address a span:hover {
 
 #experts .headline {
   margin-bottom: 34px;
+}
+
+/* Click */
+
+.click-headline {
+  background-color: #ededed;
+  margin-bottom: 16px;
+}
+
+.click-video,
+.click-link {
+  padding-left: 8px;
+}
+
+.click-video {
+  padding-top: 20px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 205px;
+}
+
+#click figure {
+  padding-bottom: 0;
+}
+
+#click .story-footnote-tag {
+  padding-bottom: 20px;
+  padding-left: 22px;
+}
+
+h3.bunched-text,
+h4.bunched-text {
+  letter-spacing: -0.03em;
+}
+
+/* Special Reports */
+
+#special-reports h3 {
+  margin-bottom: 5px;
+}
+
+#special-reports img.story-img {
+  padding-top: 0;
+}
+
+#ces-img,
+#video-games-img {
+  min-width: 100%;
+}
+
+#ces-img {
+  height: 205px;
+}
+
+#special-reports figure {
+  padding-bottom: 4px;
+}
+
+#special-reports .headline {
+  margin-bottom: 18px;
+}
+
+/* Share */
+
+#share-heading {
+  line-height: 1.2;
+  padding-bottom: 6px;
+}
+
+/* #share ul {
+  list-style-image: url('../images/mobile-alt-solid.svg');
+} */
+
+#share ul li {
+  list-style: none;
+}
+
+#share ul li:first-child::before {
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 10px;
+  position: relative;
+  top: 2px;
+  margin-left: 2px;
+  margin-right: 18px;
+  background-image: url('../images/mobile-alt-solid.svg');
+}
+
+#share ul li:nth-child(2)::before {
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 14px;
+  top: 2px;
+  position: relative;
+  margin-right: 16px;
+  background-image: url('../images/envelope-square-solid.svg');
+}
+
+#share ul li:nth-child(3)::before {
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  top: 2px;
+  position: relative;
+  margin-right: 14px;
+  background-image: url('../images/twitter-brands.svg');
+}
+
+.share-list-item {
+  color: #404040;
+  font-size: 14px;
+  padding-bottom: 14px;
 }
 
 /* Footer */
