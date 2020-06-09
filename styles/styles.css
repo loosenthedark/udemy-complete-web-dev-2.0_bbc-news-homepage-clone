@@ -37,6 +37,12 @@ h3 {
   font-weight: 400;
 }
 
+h4 {
+  font-size: 15px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+}
+
 .main-headline h3 {
   border-bottom: 3px solid #bb1919;
 }
@@ -64,7 +70,8 @@ a {
 .mini-story-caption a,
 #ces-heading a,
 .ces-story a,
-#also-heading {
+#also-heading,
+.experts-speech-bubble a {
   color: #222;
 }
 .story-link a:visited,
@@ -85,6 +92,10 @@ iframe {
 
 figure {
   padding-bottom: 9px;
+}
+
+#features figure {
+  padding-bottom: 7px;
 }
 
 figcaption {
@@ -327,7 +338,8 @@ img.story-img {
 .story-footnote-link a:hover,
 .mini-story-caption a:hover,
 #ces-heading a:hover,
-.ces-story a:hover {
+.ces-story a:hover,
+.experts-speech-bubble a:hover {
   color: #1167a8;
 }
 
@@ -354,7 +366,9 @@ img#drone-img {
 /* CES */
 
 #ces-heading,
-#also-heading {
+#also-heading,
+#features-heading,
+#experts-heading {
   width: 95%;
   font-size: 20px;
   font-weight: 400;
@@ -364,7 +378,9 @@ img#drone-img {
   margin: 22px 2.5% 15px;
 }
 
-#also-heading {
+#also-heading,
+#features-heading,
+#experts-heading {
   margin: 20px 2.5% 10px;
 }
 
@@ -385,11 +401,14 @@ img#drone-img {
 
 /* Also */
 
-#also {
+#also,
+#features {
   margin-bottom: 32px;
 }
 
-#also-heading {
+#also-heading,
+#features-heading,
+#experts-heading {
   letter-spacing: 0;
 }
 
@@ -418,6 +437,65 @@ img#drone-img {
   margin-top: -0.25em;
   vertical-align: middle;
   padding: 0.25em 0.25em 0.16em;
+}
+
+/* Experts */
+
+.experts-speech-bubble {
+  background-color: #ededed;
+  padding: 12px 12px 13px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.experts-speech-bubble::after {
+  border-color: #ededed transparent;
+  border-style: solid;
+  border-width: 14px 14px 0 0;
+  bottom: -14px;
+  content: '';
+  display: block;
+  left: 14px;
+  position: absolute;
+  width: 0;
+}
+
+.experts-speech-bubble p {
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  color: #404040;
+  margin-bottom: 6px;
+}
+
+.experts-speech-bubble h4 {
+  padding-bottom: 3px;
+}
+
+.experts-speech-bubble span {
+  margin-bottom: 0;
+}
+
+address {
+  padding-left: 12px;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.33333;
+}
+
+address a {
+  color: #404040;
+}
+
+address a span {
+  color: #bb1919;
+}
+
+address a span:hover {
+  color: #1167a8;
+}
+
+#experts .headline {
+  margin-bottom: 34px;
 }
 
 /* Footer */
