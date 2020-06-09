@@ -28,6 +28,12 @@ h2 {
   letter-spacing: -0.025em;
 }
 
+#most-popular h2 {
+  color: #1e1e1e;
+  font-weight: 400;
+  font-size: 20px;
+}
+
 h3 {
   font-size: 18px;
   color: #404040;
@@ -78,21 +84,24 @@ a {
 .ces-story a,
 .experts-speech-bubble a,
 #click-heading a,
-#share a {
+#share a,
+#follow a {
   color: #222;
 }
 #also-heading,
 #features-heading,
 #experts-heading,
 #special-reports-heading,
-#share-heading {
+#share-heading,
+#follow-heading {
   color: #404040;
 }
 .story-link a:visited,
 .story-caption a:visited,
 .mini-story-caption a:visited,
 #ces-heading a:visited,
-.ces-story a:visited {
+.ces-story a:visited,
+tbody td a:visited {
   color: #686868;
 }
 
@@ -356,7 +365,9 @@ img.story-img {
 .experts-speech-bubble a:hover,
 #click-heading a:hover,
 #share a:hover,
-.share-list-item a:hover {
+.share-list-item a:hover,
+#follow a:hover,
+table a:hover {
   color: #1167a8;
 }
 
@@ -388,7 +399,8 @@ img#drone-img {
 #experts-heading,
 #click-heading,
 #special-reports-heading,
-#share-heading {
+#share-heading,
+#follow-heading {
   width: 95%;
   font-size: 20px;
   font-weight: 400;
@@ -403,7 +415,8 @@ img#drone-img {
 #experts-heading,
 #click-heading,
 #special-reports-heading,
-#share-heading {
+#share-heading,
+#follow-heading {
   margin: 20px 2.5% 10px;
 }
 
@@ -436,7 +449,8 @@ img#drone-img {
 #experts-heading,
 #click-heading,
 #special-reports-heading,
-#share-heading {
+#share-heading,
+#follow-heading {
   letter-spacing: 0;
 }
 
@@ -587,7 +601,7 @@ h4.bunched-text {
   margin-bottom: 18px;
 }
 
-/* Share */
+/* Social Media */
 
 #share-heading {
   line-height: 1.2;
@@ -608,7 +622,7 @@ h4.bunched-text {
   height: 16px;
   width: 10px;
   position: relative;
-  top: 2px;
+  top: 3px;
   margin-left: 2px;
   margin-right: 18px;
   background-image: url('../images/mobile-alt-solid.svg');
@@ -619,7 +633,7 @@ h4.bunched-text {
   display: inline-block;
   height: 16px;
   width: 14px;
-  top: 2px;
+  top: 3px;
   position: relative;
   margin-right: 16px;
   background-image: url('../images/envelope-square-solid.svg');
@@ -630,7 +644,7 @@ h4.bunched-text {
   display: inline-block;
   height: 16px;
   width: 16px;
-  top: 2px;
+  top: 3px;
   position: relative;
   margin-right: 14px;
   background-image: url('../images/twitter-brands.svg');
@@ -640,6 +654,109 @@ h4.bunched-text {
   color: #404040;
   font-size: 14px;
   padding-bottom: 14px;
+}
+
+#follow a {
+  font-size: 14px;
+}
+
+#follow-heading {
+  margin-top: 18px;
+}
+
+#facebook,
+#twitter {
+  display: inline-block;
+  width: calc(49.5% - 5px);
+}
+
+#rss {
+  display: block;
+  width: 99%;
+  margin-left: 1%;
+  border-bottom: 4px solid #222;
+}
+
+#facebook,
+#twitter,
+#rss {
+  background-color: #f7f7f7;
+  padding: 10px 20px 12px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+#twitter {
+  position: relative;
+  right: -1px;
+  margin-left: 2px;
+  border-bottom: 4px solid #47c7fa;
+}
+
+#facebook {
+  border-bottom: 4px solid #3c5a98;
+  margin-right: 2px;
+  margin-left: 1%;
+}
+
+#social-media {
+  margin-bottom: 43px;
+}
+
+/* Most Popular */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: #ededed;
+}
+
+thead h2 {
+  padding: 12px 8px 6px;
+}
+
+thead span {
+  display: block;
+  padding-left: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #404040;
+}
+
+tbody {
+  width: 90%;
+}
+
+tbody td {
+  padding: 11px 8px 12px;
+  color: #222;
+  font-size: 15px;
+}
+
+tbody td a:hover {
+  color: #1167a8;
+}
+
+tbody th {
+  text-align: left;
+  padding-left: 8px;
+}
+
+tbody td,
+tbody th {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.weekday a {
+  color: #bb1919;
+}
+
+tbody td a {
+  color: #222;
 }
 
 /* Footer */
