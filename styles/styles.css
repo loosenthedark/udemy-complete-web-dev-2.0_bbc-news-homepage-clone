@@ -9,6 +9,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: Helmet;
   src: url('../fonts/Helmet-Regular.ttf') format('truetype');
@@ -85,7 +90,8 @@ a {
 .experts-speech-bubble a,
 #click-heading a,
 #share a,
-#follow a {
+#follow a,
+#elsewhere a {
   color: #222;
 }
 #also-heading,
@@ -93,7 +99,8 @@ a {
 #experts-heading,
 #special-reports-heading,
 #share-heading,
-#follow-heading {
+#follow-heading,
+#elsewhere-heading {
   color: #404040;
 }
 .story-link a:visited,
@@ -101,7 +108,8 @@ a {
 .mini-story-caption a:visited,
 #ces-heading a:visited,
 .ces-story a:visited,
-tbody td a:visited {
+tbody td a:visited,
+#elsewhere a:visited {
   color: #686868;
 }
 
@@ -118,7 +126,11 @@ figure {
 }
 
 #features figure {
-  padding-bottom: 7px;
+  padding-bottom: 0;
+}
+
+#features figure span {
+  padding-top: 7px;
 }
 
 figcaption {
@@ -308,6 +320,17 @@ nav a {
   padding-top: 12px;
 }
 
+#main-headline figure,
+.headlines figure {
+  padding-bottom: 0;
+}
+
+#main-caption span,
+#twitter-caption span,
+#drone-caption span {
+  padding-top: 9px;
+}
+
 img.story-img {
   display: block;
   max-width: 100%;
@@ -367,7 +390,8 @@ img.story-img {
 #share a:hover,
 .share-list-item a:hover,
 #follow a:hover,
-table a:hover {
+table a:hover,
+#elsewhere a:hover {
   color: #1167a8;
 }
 
@@ -400,7 +424,8 @@ img#drone-img {
 #click-heading,
 #special-reports-heading,
 #share-heading,
-#follow-heading {
+#follow-heading,
+#elsewhere-heading {
   width: 95%;
   font-size: 20px;
   font-weight: 400;
@@ -416,7 +441,8 @@ img#drone-img {
 #click-heading,
 #special-reports-heading,
 #share-heading,
-#follow-heading {
+#follow-heading,
+#elsewhere-heading {
   margin: 20px 2.5% 10px;
 }
 
@@ -440,7 +466,8 @@ img#drone-img {
 #also,
 #features,
 #click,
-#special-reports {
+#special-reports,
+#elsewhere {
   margin-bottom: 32px;
 }
 
@@ -450,7 +477,8 @@ img#drone-img {
 #click-heading,
 #special-reports-heading,
 #share-heading,
-#follow-heading {
+#follow-heading,
+#elsewhere-heading {
   letter-spacing: 0;
 }
 
@@ -594,7 +622,17 @@ h4.bunched-text {
 }
 
 #special-reports figure {
-  padding-bottom: 4px;
+  padding-bottom: 0;
+}
+
+#special-reports figure span {
+  padding-top: 4px;
+}
+
+#special-reports figure #video-games-caption span,
+#special-reports figure #robot-caption span,
+#special-reports figure #trending-caption span {
+  padding-top: 0;
 }
 
 #special-reports .headline {
@@ -717,6 +755,7 @@ thead {
 
 thead h2 {
   padding: 12px 8px 6px;
+  letter-spacing: 0;
 }
 
 thead span {
@@ -735,6 +774,7 @@ tbody td {
   padding: 11px 8px 12px;
   color: #222;
   font-size: 15px;
+  border-right: 15px solid #fff;
 }
 
 tbody td a:hover {
@@ -743,7 +783,8 @@ tbody td a:hover {
 
 tbody th {
   text-align: left;
-  padding-left: 8px;
+  border-left: 15px solid #fff;
+  
 }
 
 tbody td,
@@ -757,6 +798,42 @@ tbody th {
 
 tbody td a {
   color: #222;
+}
+
+/* Elsewhere */
+
+#elsewhere .headline {
+  background-color: #ededed;
+  padding: 14px 16px 16px;
+  margin-top: 24px;
+}
+
+#elsewhere-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  margin-left: 0;
+}
+
+#bible-img {
+  min-width: 100%;
+}
+
+#bible-img,
+#smoothies-img {
+  padding-top: 9px;
+}
+
+#bible-fig {
+  padding-bottom: 9px;
+}
+
+#elsewhere h4 {
+  line-height: 1.33333;
+}
+
+#smoothies-fig {
+  padding-bottom: 0;
 }
 
 /* Footer */
