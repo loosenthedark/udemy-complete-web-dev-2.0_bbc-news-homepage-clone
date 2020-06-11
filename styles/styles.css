@@ -960,6 +960,23 @@ footer h2 {
   opacity: 0.9;
 }
 
+footer p {
+  color: #fff;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+footer p a {
+  color: #fff;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
 #secondary-footer {
   background-color: #2f2f2f;
 }
@@ -1117,7 +1134,7 @@ article h2 {
 }
 
 .slide:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 2%;
 }
 
 .slide img {
@@ -1147,4 +1164,56 @@ article h2 {
   color: #bbb;
   font-weight: 400;
   letter-spacing: .5px;
+}
+
+#footer-links,
+#footer-linkz {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 18px auto 0;
+  padding-bottom: 20px;
+}
+
+#footer-linkz {
+  border-top: 1px solid #949494;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+#footer-links li:nth-child(even) {
+  border-left: 1px solid #949494;
+  padding-left: 10px;
+}
+
+#footer-linkz li:nth-child(even) {
+  padding-left: 10px;
+}
+
+.footer-link {
+  flex: 1 1 155px;
+  font-size: 13px;
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+
+.footer-link:last-child,
+.footer-link:nth-last-child(2),
+.footer-link:nth-last-child(3) {
+  padding-bottom: 2px;
+}
+
+#footer-linkz > li {
+  padding-bottom: 16px;
+  font-weight: 400;
+}
+
+.footer-link a {
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
 }
