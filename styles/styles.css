@@ -213,12 +213,6 @@ nav ul {
   min-width: 170px;
 }
 
-@media only screen and (min-width: 768px) {
-  nav ul {
-    min-width: 600px;
-  }
-}
-
 nav ul li {
   position: relative;
   list-style-type: none;
@@ -258,24 +252,11 @@ nav ul li#more-link:hover
   border-bottom: 4px solid #262626;
 }
 
-@media only screen and (max-width: 600px) {
-  nav ul li#weather-link,
-  nav ul li#iPlayer-link,
-  nav ul li#tv-link,
-  nav ul li#radio-link {
-    display: none;
-  }
-}
-
 nav ul li:nth-of-type(7) {
   padding-right: 27px;
 }
 
-@media only screen and (max-width: 374px) {
-  nav ul li:nth-of-type(7) {
-    padding-right: 6px;
-  } 
-}
+
 
 nav.navbar-link li a {
   height: 33px;
@@ -1191,7 +1172,7 @@ article h2 {
 }
 
 .footer-link {
-  flex: 1 1 155px;
+  flex: 1 1 145px;
   font-size: 13px;
   font-weight: 700;
   padding-bottom: 16px;
@@ -1217,3 +1198,157 @@ article h2 {
 .footer-link a:hover {
   text-decoration: underline;
 }
+
+/* Media Queries */
+
+/* first breakpoint */
+
+@media only screen and (max-width: 374px) {
+  nav ul li:nth-of-type(7) {
+    padding-right: 6px;
+  } 
+}
+
+/* second breakpoint */
+
+@media only screen and (max-width: 599px) {
+  nav ul li#weather-link,
+  nav ul li#iPlayer-link,
+  nav ul li#tv-link,
+  nav ul li#radio-link,
+  nav ul li#search-input {
+    display: none;
+  }
+}
+
+/* third breakpoint */
+
+@media only screen and (min-width: 600px) {
+  nav,
+  div#nav-logo,
+  #empty-nav-div-left, #empty-nav-div-right,
+  nav ul li {
+    height: 40px;
+  }
+
+  div#nav-logo {
+    min-width: 125px;
+  }
+
+  nav img#navbar-logo {
+    width: 90px;
+    height: 26px;
+    padding-left: 3px;
+  }
+
+  nav ul {
+    min-width: 360px;
+  }
+
+  nav ul li:not(:nth-of-type(8)) {
+    padding-top: 13px;
+  }
+
+  input {
+    border: none;
+    background: #e4e4e4;
+    color: #333;
+    min-width: 200px;
+    min-height: 24px;
+    padding-left: 5px;
+    position: relative;
+    align-items: baseline;
+    bottom: 3px;
+  }
+
+  /* clears the ‘X’ from Internet Explorer */
+  input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+  input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+  /* clears the ‘X’ from Chrome */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+  nav ul li:nth-of-type(8) {
+    position: relative;
+    top: 2px;
+  }
+
+  nav ul li:nth-of-type(8) img {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 18px;
+    background: #e4e4e4;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #333;
+    font-weight: 700;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #333;
+    font-weight: 700;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #333;
+    font-weight: 700;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #333;
+    font-weight: 700;
+  }
+
+  input:focus::-webkit-input-placeholder {
+      color: #999;
+  }
+
+  /* Firefox < 19 */
+
+  input:focus:-moz-placeholder {
+      color: #999;
+  }
+
+  /* Firefox > 19 */
+
+  input:focus::-moz-placeholder {
+      color: #999;
+  }
+
+  /* Internet Explorer 10 */
+
+  input:focus:-ms-input-placeholder {
+      color: #999;
+  }
+
+  nav ul li,
+  nav ul li:nth-of-type(7) {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 38px;
+  }
+  nav ul li#weather-link,
+  nav ul li#iPlayer-link,
+  nav ul li#tv-link,
+  nav ul li#radio-link,
+  nav ul li:last-of-type {
+    display: none;
+  }
+}
+
+/* fourth breakpoint */
+
+@media only screen and (min-width: 768px) {
+  nav ul {
+    min-width: 600px;
+  }
+}
+
+
+
+
+
+
+
+
