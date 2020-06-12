@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="images/bbc-favicon.ico">
-  <title>Technology - BBC News</title>
+  <title>Technology - BBC Nooz</title>
 
   <link rel="stylesheet" href="styles/styles.css">
 
@@ -13,6 +13,7 @@
 
 <body>
   <header>
+    <input type="checkbox" name="toggle" id="toggle" />
     <nav>
       <div id='nav-logo'><a href="https://www.bbc.com/"><img src="images/bbc-blocks-dark.png" id='navbar-logo'
             width="74px" alt="BBC black and white logo"></a></div>
@@ -22,18 +23,35 @@
         <div id="nav-link-triangle-2"></div>
       </div>
       <ul id='navbar-links'>
+        <li id='home-link'><a class='navbar-link' href="https://www.bbc.com/">Home</a></li>
         <li id='news-link'><a class='navbar-link' href="https://www.bbc.com/news">News</a></li>
         <li id='sport-link'><a class='navbar-link' href="https://www.bbc.com/sport">Sport</a></li>
-        <li id='weather-link'><a class='navbar-link' href="https://www.bbc.com/weather">Weather</a></li>
-        <li id='iPlayer-link'><a class='navbar-link' href="https://www.bbc.co.uk/iplayer">iPlayer</a></li>
+        <li id='reel-link'><a class='navbar-link' href="https://www.bbc.com/reel">Reel</a></li>
+        <li id='worklife-link'><a class='navbar-link' href="https://www.bbc.com/worklife">Worklife</a></li>
+        <li id='travel-link'><a class='navbar-link' href="https://www.bbc.com/travel">Travel</a></li>
+        <li id='future-link'><a class='navbar-link' href="https://www.bbc.com/future">Future</a></li>
+        <li id='culture-link'><a class='navbar-link' href="https://www.bbc.com/culture">Culture</a></li>
+        <li id='music-link'><a class='navbar-link' href="https://www.bbc.com/culture/music">Music</a></li>
         <li id='tv-link'><a class='navbar-link' href="https://www.bbc.co.uk/iplayer/guide">TV</a></li>
-        <li id='radio-link'><a class='navbar-link' href="https://www.bbc.co.uk/sounds">Radio</a></li>
-        <li id='more-link'><a class='navbar-link' href="https://www.bbc.com/news/technology#orb-footer">More</a></li>
-        <li id='search-input'><input type="search" name="search" id="search" placeholder = 'Search'><a class='navbar-link' href="https://www.bbc.co.uk/search?q="><img id = 'search-input-icon' src="images/orb-search-dark.png" alt="magnifying glass search icon"></a></li>
+        <li id='weather-link'><a class='navbar-link' href="https://www.bbc.com/weather">Weather</a></li>
+        <li id='sounds-link'><a class='navbar-link' href="https://www.bbc.co.uk/sounds">Sounds</a></li>
+        <li id='iPlayer-link'><a class='navbar-link' href="https://www.bbc.co.uk/iplayer">iPlayer</a></li>
+
+
+        <li id='more-link'>
+          <label for="toggle">More <span id='more-slider-triangle'></span></label></li>
+        <li id='search-input'><input type="search" name="search" id="search" placeholder='Search'><a class='navbar-link'
+            href="https://www.bbc.co.uk/search?q="><img id='search-input-icon' src="images/orb-search-dark.png"
+              alt="magnifying glass search icon"></a></li>
         <li><a class='navbar-link' href="https://www.bbc.co.uk/search?q="><img src="images/orb-search-dark.png"
               id='search-icon' alt="magnifying glass search icon"></a></li>
       </ul>
     </nav>
+    <div id="navbar-slidedown">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut ducimus quasi incidunt iste vero nobis nulla,
+        quos omnis excepturi recusandae deserunt pariatur nihil eius voluptates asperiores laboriosam magnam facilis
+        fugiat aperiam.</p>
+    </div>
     <div id="header-divider"><a href="http://www.bbc.co.uk/news">
         <img id='news-logo' src="images/bbc-news-logo-light.png" alt="News logo"></a>
     </div>
@@ -715,7 +733,7 @@
         <li class="footer-link"><a href='http://www.bbc.co.uk/weather/'>Weather</a></li>
         <li class="footer-link"><a href='http://www.bbc.co.uk/iplayer/'>iPlayer</a></li>
         <li class="footer-link"><a href='http://www.bbc.co.uk/tv/'>TV</a></li>
-        <li class="footer-link"><a href='http://www.bbc.co.uk/radio/'>Radio</a></li>
+        <li class="footer-link"><a href='http://www.bbc.co.uk/sounds/'>Sounds</a></li>
         <li class="footer-link"><a href='http://www.bbc.co.uk/cbbc'>CBBC</a></li>
         <li class="footer-link"><a href='http://www.bbc.co.uk/cbeebies'>CBeebies</a></li>
         <li class="footer-link"><a href='http://www.bbc.co.uk/food/'>Food</a></li>
@@ -738,7 +756,9 @@
         <li class="footer-link"><a href='http://www.bbc.co.uk/guidance/'>Parental Guidance</a></li>
         <li class="footer-link"><a href='http://www.bbc.co.uk/contact/'>Contact the BBC</a></li>
       </ul>
-      <p id='copyright'><strong>Copyright © 2016 BBC.</strong> The BBC is not responsible for the content of external sites. <strong><a href="http://www.bbc.co.uk/help/web/links/">Read about our approach to external linking.</a></strong></p>
+      <p id='copyright'><strong>Copyright © 2016 BBC.</strong> The BBC is not responsible for the content of external
+        sites. <strong><a href="http://www.bbc.co.uk/help/web/links/">Read about our approach to external
+            linking.</a></strong></p>
     </div>
   </footer>
 </body>

@@ -15,11 +15,6 @@ html {
   overflow-x: hidden;
 }
 
-@font-face {
-  font-family: Helmet;
-  src: url('../fonts/Helmet-Regular.ttf') format('truetype');
-}
-
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -157,6 +152,7 @@ nav {
   position: relative;
   border-bottom: 1px solid lightgrey;
   min-width: 320px;
+  z-index: 3;
 }
 
 nav img#navbar-logo {
@@ -177,8 +173,8 @@ div#nav-logo {
 #empty-nav-div-right {
   display: inline-block;
   height: 33px;
-  min-width: 5px;
-  width: 8%;
+  /* min-width: 5px; */
+  width: 5.5%;
 }
 #nav-link-triangle-1 {
   position: absolute;
@@ -216,14 +212,29 @@ nav ul {
 nav ul li {
   position: relative;
   list-style-type: none;
-  display: inline-block;
+  /* display: inline-block; */
   border-left: 1px solid lightgrey;
   height: 33px;
   padding-top: 9px;
-  padding-left: 8px;
+  padding-left: 6px;
   padding-right: 6px;
-  min-width: 52px;
+  /* min-width: 52px; */
   float: left;
+}
+
+nav ul li:nth-of-type(14) {
+  padding-right: 30px;
+  position: relative;
+}
+
+nav ul li:nth-of-type(14) span {
+  background-image: url('../images/orb-sprite.gif');
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 3px;
+  left: 55px;
+  top: 16px;
+  position: absolute;
 }
 
 nav ul li:hover {
@@ -234,8 +245,36 @@ nav ul li#sport-link:hover {
   border-bottom: 4px solid #fe1;
 }
 
+nav ul li#reel-link:hover {
+  border-bottom: 4px solid #0068ff;
+}
+
+nav ul li#worklife-link:hover {
+  border-bottom: 4px solid #0052a1;
+}
+
 nav ul li#news-link:hover {
   border-bottom: 4px solid #921;
+}
+
+nav ul li#culture-link:hover {
+  border-bottom: 4px solid #482878;
+}
+
+nav ul li#music-link:hover {
+  border-bottom: 4px solid #7DE9CB;
+}
+
+nav ul li#travel-link:hover {
+  border-bottom: 4px solid #589e50;
+}
+
+nav ul li#future-link:hover {
+  border-bottom: 4px solid #002856;
+}
+
+nav ul li#home-link:hover {
+  border-bottom: 4px solid #000;
 }
 
 nav ul li#weather-link:hover {
@@ -246,15 +285,15 @@ nav ul li#iPlayer-link:hover {
 }
 
 nav ul li#tv-link:hover,
-nav ul li#radio-link:hover,
+nav ul li#sounds-link:hover,
 nav ul li#more-link:hover
  {
   border-bottom: 4px solid #262626;
 }
 
-nav ul li:nth-of-type(7) {
+/* nav ul li:nth-of-type(7) {
   padding-right: 27px;
-}
+} */
 
 
 
@@ -280,10 +319,55 @@ nav a {
   color: #333;
 }
 
+#navbar-slidedown {
+  color:#000;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  display: none;
+  transition: display 1ms ease-in-out, top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94), color 600ms ease-in-out;
+  overflow: hidden;
+  z-index: -99;
+  color: #fff;
+}
+
+#toggle {
+  position:absolute;
+  appearance:none;
+  cursor:pointer;
+  left:-100%;
+  top:-100%;
+}
+
+#toggle:checked ~ #navbar-slidedown {
+  top: 33px;
+  color: #000;
+  display: block;
+}
+
+#toggle:not(:checked) ~ #navbar-slidedown {
+  display: none;
+}
+
+label {
+width: 100%;
+/* height: 40px;
+background: red; */
+/* position: relative; */
+}
+
 #header-divider {
+  transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   min-height: 56px;
   position: relative;
   background-color: #bb1919;
+}
+
+#toggle:checked ~ #header-divider {
+  margin-top: 200px;
 }
 
 #news-logo {
@@ -1034,12 +1118,6 @@ article h2 {
   background-color: #1C1C1C;
 }
 
-@supports (scroll-snap-type) {
-  .slider > a {
-    display: none;
-  }
-}
-
 .slides > div {
   scroll-snap-align: start;
   width: 266px;
@@ -1203,19 +1281,22 @@ article h2 {
 
 /* first breakpoint */
 
-@media only screen and (max-width: 374px) {
-  nav ul li:nth-of-type(7) {
-    padding-right: 6px;
-  } 
-}
+
 
 /* second breakpoint */
 
 @media only screen and (max-width: 599px) {
-  nav ul li#weather-link,
-  nav ul li#iPlayer-link,
+  nav ul li#home-link,
+  nav ul li#reel-link,
+  nav ul li#worklife-link,
+  nav ul li#travel-link,
+  nav ul li#future-link,
+  nav ul li#culture-link,
+  nav ul li#music-link,
   nav ul li#tv-link,
-  nav ul li#radio-link,
+  nav ul li#weather-link,
+  nav ul li#sounds-link,
+  nav ul li#iPlayer-link,
   nav ul li#search-input {
     display: none;
   }
@@ -1231,8 +1312,36 @@ article h2 {
     height: 40px;
   }
 
+  nav ul li#home-link,
+  nav ul li#reel-link,
+  nav ul li#worklife-link,
+  nav ul li#travel-link,
+  nav ul li#future-link,
+  nav ul li#culture-link,
+  nav ul li#music-link,
+  nav ul li#tv-link,
+  nav ul li#weather-link,
+  nav ul li#sounds-link,
+  nav ul li#iPlayer-link,
+  nav ul li:last-of-type {
+    display: none;
+  }
+
+  nav ul li#search-input {
+    display: inline-block;
+  }
+
+  nav ul li:nth-of-type(14) {
+    padding-right: 40px;
+  }
+
+  nav ul li:nth-of-type(14) span {
+    left: 65px;
+    top: 20px;
+  }
+
   div#nav-logo {
-    min-width: 125px;
+    min-width: 110px;
   }
 
   nav img#navbar-logo {
@@ -1241,11 +1350,11 @@ article h2 {
     padding-left: 3px;
   }
 
-  nav ul {
+  /* nav ul {
     min-width: 360px;
-  }
+  } */
 
-  nav ul li:not(:nth-of-type(8)) {
+  nav ul li:not(:nth-of-type(15)) {
     padding-top: 13px;
   }
 
@@ -1258,7 +1367,7 @@ article h2 {
     padding-left: 5px;
     position: relative;
     align-items: baseline;
-    bottom: 3px;
+    bottom: 1px;
   }
 
   /* clears the ‘X’ from Internet Explorer */
@@ -1270,12 +1379,11 @@ article h2 {
   input[type="search"]::-webkit-search-results-button,
   input[type="search"]::-webkit-search-results-decoration { display: none; }
 
-  nav ul li:nth-of-type(8) {
+  nav ul li:nth-of-type(15) {
     position: relative;
-    top: 2px;
   }
 
-  nav ul li:nth-of-type(8) img {
+  nav ul li:nth-of-type(15) img {
     position: absolute;
     z-index: 2;
     top: 10px;
@@ -1322,33 +1430,58 @@ article h2 {
       color: #999;
   }
 
-  nav ul li,
-  nav ul li:nth-of-type(7) {
+  nav ul li {
     padding-left: 10px;
     padding-right: 10px;
-    min-width: 38px;
-  }
-  nav ul li#weather-link,
-  nav ul li#iPlayer-link,
-  nav ul li#tv-link,
-  nav ul li#radio-link,
-  nav ul li:last-of-type {
-    display: none;
   }
 }
 
 /* fourth breakpoint */
 
 @media only screen and (min-width: 768px) {
-  nav ul {
+  /* nav ul {
     min-width: 600px;
+  } */
+  nav ul li#reel-link,
+  nav ul li#worklife-link {
+    display: inline-block;
+  }
+
+  nav ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* fifth breakpoint */
+
+@media only screen and (min-width: 992px) {
+  nav ul li#travel-link,
+  nav ul li#future-link {
+    display: inline-block;
+  }
+
+  nav ul li:nth-of-type(14) {
+    padding-right: 80px;
+  }
+
+  nav ul li:nth-of-type(14) span {
+    left: 105px;
   }
 }
 
 
 
+@media only screen and (min-width: 1030px) {
+  nav ul li#home-link {
+    display: inline-block;
+  }
+}
+/* sixth breakpoint */
 
-
-
-
-
+@media only screen and (min-width: 1200px) {
+  nav ul li#culture-link,
+  nav ul li#music-link {
+    display: inline-block;
+  }
+}
