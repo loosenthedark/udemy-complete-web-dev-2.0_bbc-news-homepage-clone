@@ -411,6 +411,10 @@ position: relative; */
   background-color: #bb1919;
 }
 
+#header-tabs {
+  display: none;
+}
+
 #toggle:checked ~ #header-divider {
   margin-top: 240px;
 }
@@ -1355,6 +1359,10 @@ article h2 {
     margin-top: 170px;
   }
 
+  img.story-img {
+    min-width: 100%;
+  }
+
 }
 
 
@@ -1511,6 +1519,114 @@ article h2 {
   #toggle:checked ~ #navbar-slidedown {
     top: 40px;
   }
+
+  #news-logo {
+    width: 120px;
+    height: 30px;
+    margin-left: 12px;
+  }
+
+  #header-tabs {
+    display: block;
+    height: 40px;
+    padding: 0 16px;
+    background: #bb1919;
+  }
+
+  #header-tabs ul {
+    margin-left: -8px;
+    list-style-type: none;
+  }
+
+  #header-tabs ul li {
+    float: left;
+    line-height: 1.125rem;
+    font-size: 13.36px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+    padding-bottom: 8px;
+  }
+
+  #header-tabs ul li:first-child {
+    padding-left: 4px;
+  }
+
+  #header-tabs ul li:nth-child(7) {
+    border-bottom: 4px solid #fff;
+  }
+
+  #header-tabs ul li:nth-child(8),
+  #header-tabs ul li:nth-child(9),
+  #header-tabs ul li:nth-child(10),
+  #header-tabs ul li:nth-child(11),
+  #header-tabs ul li:nth-child(12),
+  #header-tabs ul li:nth-child(13),
+  #header-tabs ul li:nth-child(14) {
+    display: none;
+  }
+
+  #header-tabs ul li:nth-child(15) {
+    float: right;
+    width: 78px;
+    padding-bottom: 12px;
+    display: block;
+    height: 36px;
+    position: relative;
+    top: 4px;
+  }
+
+  #header-tabs ul li:nth-child(15) a {
+    position: relative;
+    top: 14px;
+  }
+
+  #header-tabs ul li:nth-child(15) a > span {
+    position: relative;
+    display: block;
+    bottom: 4px;
+  }
+
+  #header-tabs ul li:nth-child(15) a > span::after {
+    border-top: 4px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    content: '';
+    height: 0;
+    position: relative;
+    right: -20px;
+    top: 11px;
+    width: 0;
+  }
+
+  #header-tabs ul li:not(:nth-child(15)):hover {
+    border-bottom: 4px solid #fff;
+  }
+
+  #header-tabs ul li:nth-child(15):hover {
+    background: #1e1e1e;
+  }
+
+  #header-tabs ul li a {
+    color: #fff;
+    height: 36px;
+    position: relative;
+    bottom: -3px;
+  }
+
+  #header-tabs ul li a > span {
+    height: 18px;
+    display: block;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-left: 1px solid #bb454f;
+  }
+
+  #header-tabs ul li:first-child a span {
+    border-left: 0;
+    padding-left: 0;
+  }
 }
 
 @media only screen and (min-width: 635px) {
@@ -1594,11 +1710,20 @@ article h2 {
   nav ul li:nth-of-type(15) {
     padding-left: 0px;
   }
+
+  #header-tabs ul li:nth-child(8),
+  #header-tabs ul li:nth-child(9) {
+    display: inline-block;
+  }
 }
 
 @media only screen and (min-width: 909px) {
   #navbar-slidedown ul li:nth-child(7) {
     padding-top: 14px;
+  }
+
+  #header-tabs ul li:nth-child(10) {
+    display: inline-block;
   }
 }
 
@@ -1687,6 +1812,37 @@ article h2 {
   #toggle:checked ~ #header-divider {
     margin-top: 60px;
   }
+
+  #header-tabs {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  #header-tabs ul {
+    height: 36px;
+    margin-left: -12px;
+  }
+
+  #header-tabs ul li:first-child a span {
+    margin-left: 14px;
+  }
+
+  #header-tabs ul li:first-child {
+    padding-left: 0;
+  }
+
+  #header-tabs ul li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  #header-tabs ul li:nth-child(11) {
+    display: inline-block;
+  }
+
+  #news-logo {
+    margin-left: 3vw;
+  }
 }
 
 
@@ -1711,6 +1867,21 @@ article h2 {
   nav ul li:nth-of-type(15) img {
     right: 3px;
   }
+
+  #header-tabs ul li:nth-child(15) {
+    float: left;
+    width: 100px;
+  }
+
+  #header-tabs ul li a > span {
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+  }
+
+  #header-tabs ul li:nth-child(15) a > span::after {
+    right: -40px;
+  }
+
 }
 /* sixth breakpoint */
 
@@ -1756,5 +1927,22 @@ article h2 {
 
   div#nav-logo {
     min-width: 125px;
+  }
+
+  #header-tabs ul li:nth-child(12) {
+    display: inline-block;
+  }
+
+  #header-tabs {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  #news-logo {
+    margin-left: 5vw;
+  }
+
+  #navbar-slidedown ul li:nth-child(15) {
+    float: left;
   }
 }
