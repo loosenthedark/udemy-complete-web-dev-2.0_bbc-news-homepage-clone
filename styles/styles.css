@@ -235,6 +235,7 @@ nav ul li:nth-of-type(14) span {
   left: 55px;
   top: 16px;
   position: absolute;
+  display: block;
 }
 
 nav ul li:hover {
@@ -320,18 +321,19 @@ nav a {
 }
 
 #navbar-slidedown {
-  color:#000;
   position: absolute;
-  top: -200px;
+  top: -240px;
   left: 0;
   width: 100%;
-  height: 200px;
-  padding: 20px;
+  height: 240px;
   display: none;
-  transition: display 1ms ease-in-out, top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94), color 600ms ease-in-out;
+  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94), color 600ms ease-in-out;
   overflow: hidden;
-  z-index: -99;
   color: #fff;
+}
+
+#navbar-slidedown #more-block {
+  display: none;
 }
 
 #toggle {
@@ -345,7 +347,7 @@ nav a {
 #toggle:checked ~ #navbar-slidedown {
   top: 33px;
   color: #000;
-  display: block;
+  display: flex;
 }
 
 #toggle:not(:checked) ~ #navbar-slidedown {
@@ -353,10 +355,53 @@ nav a {
 }
 
 label {
-width: 100%;
+cursor: pointer;
+display: block;
 /* height: 40px;
-background: red; */
-/* position: relative; */
+position: relative; */
+}
+
+#navbar-slidedown ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+#navbar-slidedown ul li {
+  flex: 1 1 152px;
+  display: inline-block;
+  padding-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#navbar-slidedown ul li a {
+  color: #000;
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 7px;
+  margin-right: 10px;
+}
+
+#navbar-slidedown ul li a:hover,
+#navbar-slidedown ul li a:active {
+  color: #fff;
+  background-color: #333;
+}
+
+#navbar-slidedown ul li:first-child {
+  font-family: "Gill Sans","Gill Sans MT",Arial,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding-top: 8px;
+  padding-left: 7px;
+}
+
+#navbar-slidedown ul li:nth-child(2) {
+  padding-top: 14px;
 }
 
 #header-divider {
@@ -367,7 +412,7 @@ background: red; */
 }
 
 #toggle:checked ~ #header-divider {
-  margin-top: 200px;
+  margin-top: 240px;
 }
 
 #news-logo {
@@ -1285,6 +1330,34 @@ article h2 {
 
 /* second breakpoint */
 
+@media only screen and (min-width: 480px) {
+
+  #navbar-slidedown {
+    height: 170px;
+  }
+
+  #navbar-slidedown ul li {
+    /* height: 40px; */
+    margin: 0;
+    padding-bottom: 3px;
+    padding-left: 8px;
+  }
+
+  #navbar-slidedown ul li:first-child {
+    padding-left: 15px;
+  }
+
+  #navbar-slidedown ul li:nth-child(3) {
+    padding-top: 14px;
+  }
+
+  #toggle:checked ~ #header-divider {
+    margin-top: 170px;
+  }
+
+}
+
+
 @media only screen and (max-width: 599px) {
   nav ul li#home-link,
   nav ul li#reel-link,
@@ -1434,6 +1507,25 @@ article h2 {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  #toggle:checked ~ #navbar-slidedown {
+    top: 40px;
+  }
+}
+
+@media only screen and (min-width: 635px) {
+
+  #navbar-slidedown ul li:nth-child(4) {
+    padding-top: 14px;
+  }
+
+  #navbar-slidedown {
+    height: 135px;
+  }
+
+  #toggle:checked ~ #header-divider {
+    margin-top: 135px;
+  }
 }
 
 /* fourth breakpoint */
@@ -1451,30 +1543,173 @@ article h2 {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  #navbar-slidedown,
+  #navbar-slidedown #more-block {
+    display: flex;
+  }
+
+  #navbar-slidedown #more-block {
+    flex: 1 0 200px;
+    font-family: "Gill Sans","Gill Sans MT",Arial,sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding-top: 8px;
+    padding-left: 10px;
+  }
+
+  #navbar-slidedown ul {
+    flex: 3 0 560px;
+  }
+
+  #navbar-slidedown ul li {
+    margin-right: 10px;
+  }
+
+  #navbar-slidedown ul li:first-child {
+    display: none;
+  }
+
+  #navbar-slidedown ul li:nth-child(3),
+  #navbar-slidedown ul li:nth-child(4) {
+    display: none;
+  }
+
+  #navbar-slidedown ul li:nth-child(5),
+  #navbar-slidedown ul li:nth-child(6) {
+    padding-top: 14px;
+  }
+
+  input {
+    left: 10px;
+  }
+
+  nav ul li:nth-of-type(15) img {
+    top: 12px;
+    right: 10px;
+  }
+
+  nav ul li:nth-of-type(15) {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 909px) {
+  #navbar-slidedown ul li:nth-child(7) {
+    padding-top: 14px;
+  }
 }
 
 /* fifth breakpoint */
 
 @media only screen and (min-width: 992px) {
+  .desktop-wrapper {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  nav .desktop-wrapper {
+    height: 40px;
+  }
+
+  nav ul {
+    margin-right: 3vw;
+  }
+
+  nav ul li {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  #empty-nav-div-left {
+    width: 4.5%;
+  }
+
+  nav img#navbar-logo {
+    left: 3vw;
+  }
+  
   nav ul li#travel-link,
-  nav ul li#future-link {
+  nav ul li#future-link,
+  nav ul li#culture-link {
     display: inline-block;
   }
 
   nav ul li:nth-of-type(14) {
-    padding-right: 80px;
+    padding-right: 55px;
   }
 
   nav ul li:nth-of-type(14) span {
-    left: 105px;
+    left: 80px;
+  }
+
+  #navbar-slidedown ul li:nth-child(5),
+  #navbar-slidedown ul li:nth-child(6),
+  #navbar-slidedown ul li:nth-child(7) {
+    display: none;
+  }
+
+  #navbar-slidedown {
+    margin-left: 3vw;
+  }
+
+  #navbar-slidedown ul {
+    justify-content: flex-start;
+    margin-right: 3vw;
+    max-width: 79%;
+  }
+
+  #navbar-slidedown ul li {
+    max-width: 16.15%;
+    padding-top: 15px;
+    margin-right: 2px;
+  }
+
+  #navbar-slidedown ul li:nth-child(2) {
+    padding-top: 15px;
+  }
+
+  #navbar-slidedown ul li a {
+    margin-right: 0;
+  }
+
+  #navbar-slidedown #more-block {
+    max-width: 15%;
+    padding-left: 0;
+  }
+
+  #navbar-slidedown {
+    height: 60px;
+  }
+
+  #toggle:checked ~ #header-divider {
+    margin-top: 60px;
   }
 }
 
 
 
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1070px) {
   nav ul li#home-link {
     display: inline-block;
+  }
+
+  nav ul li:nth-last-child(2) {
+    padding-right: 5px;
+  }
+
+  #navbar-slidedown ul li {
+    max-width: 20%;
+  }
+
+  #navbar-slidedown ul li:nth-child(2) {
+    display: none;
+  }
+
+  nav ul li:nth-of-type(15) img {
+    right: 3px;
   }
 }
 /* sixth breakpoint */
@@ -1483,5 +1718,43 @@ article h2 {
   nav ul li#culture-link,
   nav ul li#music-link {
     display: inline-block;
+  }
+
+  nav ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  nav ul {
+    margin-right: 5vw;
+  }
+
+  nav img#navbar-logo {
+    left: 5vw;
+  }
+
+  #navbar-slidedown {
+    margin-left: 5vw;
+  }
+
+  #navbar-slidedown ul {
+    margin-right: 3vw;
+    max-width: 75%;
+  }
+
+  #navbar-slidedown ul li:nth-child(8) {
+    display: none;
+  }
+
+  #navbar-slidedown ul li {
+    max-width: 25%;
+  }
+
+  #empty-nav-div-left {
+    width: 2.3%;
+  }
+
+  div#nav-logo {
+    min-width: 125px;
   }
 }
