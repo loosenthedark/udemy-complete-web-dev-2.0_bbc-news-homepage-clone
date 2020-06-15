@@ -8,3 +8,5 @@ I learned how to target sibling elements of hovered <a> items for my CSS carouse
 
 Tips on how to build the pure CSS3 slide down toggle functionality in the navbar came from here: https://stackoverflow.com/questions/13412054/slide-down-div-on-click-pure-css
 https://codepen.io/surjithctly/pen/pLDwe
+
+Help with preserving the aspect ratio of iframes and keeping them responsive came from here: https://stackoverflow.com/questions/25302836/responsive-video-iframes-keeping-aspect-ratio-with-only-css
