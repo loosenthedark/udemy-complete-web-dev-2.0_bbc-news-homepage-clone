@@ -533,6 +533,10 @@ img.story-img {
   font-size: 16px;
 }
 
+#drone-video {
+  display: none;
+}
+
 .headline-divider {
   display: block;
   height: 1px;
@@ -640,6 +644,87 @@ img#drone-img {
 
 #ces {
   margin-bottom: 32px;
+}
+
+#ces iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+#ces .iframe-container {
+  margin-top: 5px;
+  padding-right: 4px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: lightgrey;
+}
+
+/* Watch/Listen */
+
+#watch-listen,
+#watch-listen + hr {
+  display: none;
+}
+
+#watch-listen iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+#watch-listen .iframe-container {
+  position: relative;
+  width: 41%;
+  padding-bottom: 23.06%;
+  height: 0;
+  background: lightgrey;
+  display: inline-block;
+}
+
+#watch-listen figcaption {
+  width: 28%;
+  display: inline-block;
+  position: absolute;
+}
+
+#watch-listen .headline:nth-of-type(2) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#watch-listen h3 {
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.watch-listen-figure {
+  min-height: 110px;
+  margin-bottom: 15px;
+}
+
+#watch-listen .watch-listen-headline:nth-of-type(5) figure,
+#watch-listen .watch-listen-headline:nth-of-type(6) figure {
+  margin-bottom: 33px;
+}
+
+#watch-listen .story-footnote-tag.story-link {
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 1.5;
+}
+
+.timestamp {
+  padding-left: 14px;
 }
 
 /* Also */
@@ -1775,11 +1860,6 @@ article h2 {
     padding-right: 14px;
   }
 
-  .headline:first-of-type,
-  .headline:nth-of-type(2) {
-    margin-top: 15px;    
-  }
-
   .headlines h2 {
     padding-top: 10px;
     font-size: 20px;
@@ -1819,8 +1899,16 @@ article h2 {
     padding-bottom: 50.3px;
   }
 
+  .headlines .story-footnote-tag.story-link {
+    line-height: 1.5;
+  }
+
   img#drone-img {
     display: none;
+  }
+
+  #drone-video {
+    display: block;
   }
 
   img#twitter-img {
@@ -1876,6 +1964,10 @@ article h2 {
     border-left: 1px solid rgb(219, 219, 219);
   }
 
+  .headlines > .headline:nth-of-type(2) ul {
+    margin-bottom: 0;
+  }
+
   .headline.headline-box {
     padding-right: 0;
   }
@@ -1893,7 +1985,7 @@ article h2 {
   }
 
   .headline-container > .headline:nth-of-type(1) h2,
-  .headline-container > .headline:nth-of-type(1) span {
+  .headline-container > .headline:nth-of-type(1) > span {
     padding-left: 0px;
   }
 
@@ -1926,7 +2018,7 @@ article h2 {
 
   .headlines > .headline,
   .headline-container {
-    height: 460px;
+    height: 445px;
     margin-bottom: 12px;
   }
 
@@ -1952,7 +2044,246 @@ article h2 {
   h2.mini-story-caption {
     padding-left: 0;
   }
-  
+
+  #mini-story-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #blockchain-headline + hr,
+  #child-labour-headline + hr,
+  #bitcoin-headline + hr,
+  #friends-reunited-headline + hr,
+  #peshawar-headline + hr {
+    display: none;
+  }
+
+  #blockchain-headline,
+  #child-labour-headline,
+  #bitcoin-headline,
+  #friends-reunited-headline,
+  #peshawar-headline,
+  #pakistan-headline {
+    width: 46%;
+    height: unset;
+  }
+
+  #blockchain-headline h2,
+  #child-labour-headline h2,
+  #bitcoin-headline h2,
+  #friends-reunited-headline h2,
+  #peshawar-headline h2,
+  #pakistan-headline h2 {
+    font-size: 16px;
+  }
+
+  #bitcoin-headline h2,
+  #friends-reunited-headline h2,
+  #peshawar-headline h2,
+  #pakistan-headline h2 {
+    padding-top: 12px;
+  }
+
+  #blockchain-headline,
+  #child-labour-headline,
+  #bitcoin-headline,
+  #friends-reunited-headline {
+    border-bottom: 1px solid rgb(219, 219, 219);
+  }
+
+  #blockchain-headline,
+  #friends-reunited-headline,
+  #peshawar-headline {
+    margin-left: 2.5%;
+    margin-right: 1.5%;
+  }
+
+  #child-labour-headline,
+  #bitcoin-headline,
+  #pakistan-headline {
+    margin-right: 2.5%;
+    margin-left: 1.5%;
+  }
+
+  #blockchain-headline,
+  #child-labour-headline {
+    padding-top: 19px;
+    margin-top: 0;
+  }
+
+  #child-labour-headline {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #last-mini-story-footnote {
+    margin-bottom: 0;
+  }
+
+  #peshawar-headline > span {
+    margin-bottom: 0;
+  }
+
+  #peshawar-headline,
+  #pakistan-headline {
+    margin-bottom: 34px;
+  }
+
+  .mini-story-container .mini-story-footnote {
+    padding-bottom: 16px;
+  }
+
+  .desktop-wrapper {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
+  }
+
+  header .desktop-wrapper {
+    height: 40px;
+  }
+
+  nav img#navbar-logo {
+    left: 2.5%;
+  }
+
+  #ces-heading {
+    font-size: 24px;
+    line-height: 1.6667;
+    margin-top: 16px;
+    letter-spacing: unset;
+  }
+
+  .iframe-wrapper > iframe {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    float: left;
+    border: none;
+  }
+
+  .iframe-wrapper > iframe body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .iframe-wrapper {
+    margin: 0;
+    padding: 0;
+    width: unset;
+    /* display: inline-block; */
+    box-sizing: border-box;
+    width: 23%;
+    float: left;
+  }
+
+  #ces .iframe-container {
+    margin-top: 0;
+  }
+
+  /* .iframe-wrapper:nth-of-type(3) {
+    width: 100%;
+  } */
+
+  #ces .desktop-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #ces-heading {
+    margin-bottom: 11px;
+    padding-bottom: 0;
+  }
+
+  #ces-heading h2 {
+    line-height: unset;
+  }
+
+  #ces h3 {
+    padding-top: 8px;
+    font-size: 18px;
+  }
+
+  #watch-listen,
+  #watch-listen + hr {
+    display: block;
+  }
+
+  #watch-listen h2,
+  #also h2 {
+    font-size: 24px;
+    line-height: 1.6667;
+    font-weight: 400;
+    margin-left: 2.5%;
+    color: #404040;
+    padding-top: 18px;
+    padding-bottom: 10px;
+  }
+
+  .headline.watch-listen-headline {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  #also h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  #also > .desktop-wrapper {
+    margin-top: 10px;
+    display: inline-block;    
+  }
+
+  .headline.also-story {
+    padding: 0;
+    width: 47.75%;
+    display: flex;
+  }
+
+  .headline.also-story:first-of-type {
+    margin-right: 2.25%;
+  }
+
+  .headline.also-story:nth-of-type(2) {
+    margin-left: 2.25%;
+  }
+
+  #also {
+    margin-bottom: 40px;
+  }
+
+  .also-story-img {
+    flex: 4;
+  }
+
+  .also-story-text {
+    flex: 5;
+  }
+
+  #also .also-story-img {
+    padding-right: 8px;
+  }
+
+  #also .also-story-text h2 {
+    padding-top: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-left: 0;
+  }
+
+  #also .story-footnote-tag {
+    padding-left: 0;
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+
+  #newsbeat-badge {
+    font-size: 11.5px;
+  }
+
 }
 
 @media only screen and (min-width: 635px) {
@@ -1977,10 +2308,20 @@ article h2 {
     margin-bottom: 120px;
   }
 
-  .headline:nth-of-type(2) .story-footnote-tag a {
+  .headlines > .headline:nth-of-type(2) .story-footnote-tag a {
     position: relative;
     right: 0px;
   }
+
+  .headlines > .headline,
+  .headline-container {
+    height: 435px;
+  }
+
+  .headline-box {
+    height: 145px;
+  }
+
 }
 
 /* fourth breakpoint */
@@ -2071,11 +2412,10 @@ article h2 {
     padding-left: 12px;
   }
 
-  .main-headline,
-  .headline {
+  .main-headline {
     width: 95%;
-    margin-left: 12px;
-    margin-right: calc(5% - 12px)
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 
   #main-headline img {
@@ -2093,6 +2433,24 @@ article h2 {
   #main-headline > ul {
     margin-top: 220px;
   }
+
+  .headlines > .headline,
+  .headline-container {
+    height: 390px;
+  }
+
+  .headline-box {
+    height: 130px;
+  }
+
+  .watch-listen-figure {
+    min-height: 95px;
+  }
+
+  #watch-listen .watch-listen-headline:nth-of-type(5) figure, #watch-listen .watch-listen-headline:nth-of-type(6) figure {
+    margin-bottom: 20px;
+  }
+  
 }
 
 @media only screen and (min-width: 909px) {
@@ -2128,6 +2486,12 @@ article h2 {
     margin-top: 202px;
   }
 
+  #watch-listen .watch-listen-headline:first-of-type figure,
+  #watch-listen .watch-listen-headline:nth-of-type(2) figure, #watch-listen .watch-listen-headline:nth-of-type(3) figure,
+  #watch-listen .watch-listen-headline:nth-of-type(4) figure {
+    margin-bottom: 3px;
+  }
+
 }
 
 /* fifth breakpoint */
@@ -2146,6 +2510,7 @@ article h2 {
   .desktop-wrapper {
     margin-left: 3%;
     margin-right: 3%;
+    width: 94%;
   }
 
   nav .desktop-wrapper {
@@ -2336,13 +2701,45 @@ article h2 {
     position: absolute;
   }
 
-  img#twitter-img,
-  img#drone-img {
-    min-width: 50%;
+  .headlines > .headline:first-of-type {
+    margin-left: 3%;
+  }
+
+  .headline-container {
+    margin-right: 3%;
+    width: calc(27.5% - 24px);
+  }
+
+  .headline-container > .headline.headline-box {
+    width: 84%;
+    height: 145px;
+  }
+
+  .headline-container > .headline.headline-box:nth-of-type(2) {
+    height: 155px;
+  }
+
+  .headline-container > .headline.headline-box:nth-of-type(3) {
+    height: 135px;
+  }
+
+  .headlines > .headline, .headline-container {
+    height: 435px;
   }
 
   hr {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
     margin-top: 320px;
+  }
+
+  .headline-container + hr {
+    margin-top: 2px;
+  }
+
+  header + hr {
+    width: 64%;
   }
 
   #main-caption span {
@@ -2370,15 +2767,208 @@ article h2 {
     max-width: 65%;
   }
 
-  .headline {
-    width: 94%;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-
   .main-headline {
     margin-left: 3%;
     width: 65%;
+  }
+
+  .headlines > .headline:first-of-type {
+    width: 24%;
+  }
+
+  .headlines > .headline:nth-of-type(2) {
+    width: calc(24% + 14px);
+  }
+
+  .headline-container {
+    width: calc(17% - 14px);
+    margin-right: 0;
+  }
+
+  #mini-story-container + hr {
+    margin-top: 0;
+  }
+
+  .headline-container + hr,
+  #mini-story-container + hr {
+    width: 64%;
+  }  
+
+  #blockchain-headline,
+  #friends-reunited-headline,
+  #peshawar-headline {
+    margin-left: 4.4%;
+    margin-right: 1.47%;
+  }
+
+  #child-labour-headline,
+  #bitcoin-headline,
+  #pakistan-headline {
+    margin-right: 0;
+    margin-left: 1.52%;
+  }
+
+  #blockchain-headline,
+  #friends-reunited-headline,
+  #peshawar-headline,
+  #child-labour-headline,
+  #bitcoin-headline,
+  #pakistan-headline {
+    width: 45.4%;
+  }
+
+  h2#ces-heading {
+    margin-left: 3%;
+    width: 65%;
+    margin-right: 0;
+  }
+
+  #ces .desktop-wrapper {
+    width: 64%;
+    margin-right: 0;
+  }
+
+  #ces + hr {
+    margin-top: unset;
+    margin-right: 0;
+    width: 64%;
+  }
+
+  #ces h3 {
+    font-size: 16px;
+  }
+
+  #watch-listen + hr {
+    display: none;
+  }
+
+  #watch-listen {
+    width: 29%;
+    margin-right: 3%;
+    position: absolute;
+    right: 0;
+    top: 196px;
+    border-left: 1px solid rgb(219, 219, 219);
+  }
+
+  #watch-listen .desktop-wrapper {
+    margin: 0;
+    width: 100%;
+  }
+
+  #watch-listen .iframe-container {
+    width: 37%;
+    position: absolute;
+    top: 0;
+  }
+
+  #watch-listen .iframe-container {
+    padding-bottom: 20.82%;
+  }
+
+  #watch-listen h3 {
+    font-size: 16px;
+    padding-right: 0;
+  }
+
+  #watch-listen figcaption {
+    position: relative;
+    left: 37%;
+    width: 61.4%;
+  }
+
+  .headline.watch-listen-headline {
+    width: 100%;
+    display: block;
+  }
+
+  .watch-listen-figure .iframe-container,
+  .watch-listen-figure figcaption {
+    display: inline-block;
+  }
+
+  #watch-listen h2 {
+    margin-left: 16px;
+    padding-top: 0px;
+  }
+
+  .watch-listen-figure {
+    position: relative;
+    padding-left: 16px;
+    padding-bottom: 0;
+    height: 100px;
+  }
+
+  #watch-listen figcaption {
+    left: calc(37% + 6px);
+    width: calc(61.4%);
+  }
+
+  #watch-listen span.story-footnote-tag.story-link {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  #watch-listen .watch-listen-headline figure,
+  #watch-listen .watch-listen-headline:first-of-type figure, #watch-listen .watch-listen-headline:nth-of-type(2) figure, #watch-listen .watch-listen-headline:nth-of-type(3) figure, #watch-listen .watch-listen-headline:nth-of-type(4) figure,
+  #watch-listen .watch-listen-headline:nth-of-type(5) figure {
+    margin-bottom: 3px;
+  }
+
+  #mini-story-container {
+    width: 68%;
+  }
+
+  #peshawar-headline,
+  #pakistan-headline {
+    margin-bottom: 28px;
+  }
+
+  #also {
+    margin-bottom: 24px;
+    width: 67%;
+  }
+
+  #also h2,
+  #also > .desktop-wrapper {
+    margin-left: 4.48%;
+    width: 95.52%;
+    margin-right: 0;
+  }
+
+  #also > .desktop-wrapper {
+    margin-top: 8px;
+  }
+
+  #also + hr {
+    margin-top: unset;
+    margin-right: 0;
+    width: 64%;
+  }
+
+  .headline.also-story {
+    width: 49%;
+  }
+
+  .headline.also-story:first-of-type {
+    margin-right: 1%
+  }
+
+  .headline.also-story:nth-of-type(2) {
+    margin-left: 1%;
+  }
+
+  .also-story-img {
+    flex: 54;
+  }
+
+  .also-story-text {
+    flex: 46;
+  }
+
+  #also .story-footnote-tag {
+    font-size: 13px;
+    line-height: 1.4;
   }
 
 }
@@ -2438,6 +3028,18 @@ article h2 {
 
   hr {
     margin-top: 300px;
+  }
+
+  .headline-container > .headline.headline-box:nth-of-type(2), 
+  .headline-container > .headline.headline-box:nth-of-type(3) {
+    height: 145px;
+  }
+
+  header + hr,
+  .headline-container + hr,
+  #mini-story-container + hr,
+  #ces + hr {
+    width: 63.5%;
   }
 
 }
@@ -2575,7 +3177,21 @@ article h2 {
   .main-headline {
     margin-left: 5%;
     margin-right: 0;
-    width: 60%;
+    width: 63%;
+  }
+
+  .main-headline {
+    width: 61%;
+  }
+
+  .headlines > .headline:first-of-type {
+    margin-left: 5%;
+    width: 22%;
+  }
+
+  .headlines > .headline:nth-of-type(2) {
+    margin-left: 0;
+    width: calc(22% + 14px);
   }
 
   #main-headline img {
@@ -2596,8 +3212,95 @@ article h2 {
 
   figcaption#main-caption {
     left: 5%;
-    max-width: 60%;
+    max-width: 61%;
     padding-left: calc(0.6 * 60% + 1.5%);
+  }
+
+  header + hr {
+    margin-left: 5%;
+    margin-right: 0;
+    width: 59.5%;
+  }
+
+  #watch-listen {
+    margin-right: 5%;
+  }
+
+  .headline.watch-listen-headline {
+    margin-left: 0;
+  }
+
+  .watch-listen-figure {
+    height: 90px;
+  }
+
+  .headline.headline-box {
+    padding-right: 10px;
+  }
+
+  #blockchain-headline, #friends-reunited-headline, #peshawar-headline,
+  #child-labour-headline, #bitcoin-headline,
+  #pakistan-headline {
+    width: 43.6%;
+  }
+
+  #blockchain-headline, #friends-reunited-headline, #peshawar-headline {
+    margin-left: 7.597%;
+    margin-right: 1.51%;
+  }
+
+  #child-labour-headline, #bitcoin-headline,
+  #pakistan-headline {
+    margin-left: 1.51%;
+  }
+
+  header + hr,
+  .headline-container + hr,
+  #mini-story-container + hr,
+  #ces + hr {
+    margin-left: 5%;
+    margin-right: 0;
+    width: 59.5%;
+  }
+
+  h2#ces-heading {
+    margin-left: 5%;
+    width: 61%;
+  }
+
+  #ces .desktop-wrapper {
+    width: 59.5%;
+  }
+
+  #mini-story-container {
+    width: 66%;
+  }
+
+  #also {
+    width: 64.5%;
+    margin-bottom: 34px;
+  }
+
+  #also h2,
+  #also > .desktop-wrapper {
+    margin-left: 7.75%;
+    width: 92.25%;
+    margin-right: 0;
+  }
+
+  .headline.also-story:first-of-type {
+    margin-left: 0;
+  }
+
+  #also + hr {
+    margin-left: 5%;
+    margin-right: 0;
+    width: 59.5%;
+  }
+
+  .also-story-img,
+  .also-story-text {
+    flex: 1;
   }
 }
 
@@ -2676,7 +3379,7 @@ article h2 {
   }
 
   .main-headline {
-    width: 60%;
+    width: 61%;
   }
 
   #main-headline > span {
@@ -2716,4 +3419,16 @@ article h2 {
     font-size: .85rem;
     padding-top: 10px;
   }
+
+  nav .desktop-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  }
+
+  #ces .desktop-wrapper {
+    margin-left: 5%;
+    margin-right: 0;
+  }
+  
 }

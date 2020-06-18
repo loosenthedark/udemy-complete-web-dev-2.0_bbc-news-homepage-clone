@@ -172,7 +172,11 @@
       </div>
       <hr>
       <div class="headline">
-        <figure><div class="iframe-container"><iframe src="https://www.youtube.com/embed/MUWipEivCtY" frameborder="0" width='100%' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><img class='story-img' id='drone-img' src="images/drone germany.jpg"
+        <figure>
+          <div class="iframe-container" id='drone-video'><iframe src="https://www.youtube.com/embed/MUWipEivCtY"
+              frameborder="0" width='100%'
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div><img class='story-img' id='drone-img' src="images/drone germany.jpg"
             alt="car driving with drone overhead">
           <figcaption id='drone-caption'>
             <h2 class='story-caption'><a href="http://www.bbc.co.uk/news/technology-35351709">Drone lands on moving car
@@ -195,121 +199,248 @@
         <div class="headline headline-box">
           <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35351158">Samsung updates sticky
               stylus holder</a></h2>
-          <span class='story-footnote-tag  story-link mini-story-footnote'>1 hour ago <span
-              class='story-footnote-tag-divider'>|</span> <a
+          <span class='story-footnote-tag  story-link mini-story-footnote'><span class="timestamp">1 hour ago
+            </span><span class='story-footnote-tag-divider'>|</span> <a
               href="https://www.bbc.com/news/technology">Technology</a></span>
         </div>
         <hr>
         <div class="headline headline-box">
           <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35341528">Minecraft to launch
               education edition</a></h2>
-          <span class='story-footnote-tag story-link mini-story-footnote'>4 hours ago <span
-              class='story-footnote-tag-divider'>|</span> <a
+          <span class='story-footnote-tag story-link mini-story-footnote'><span class="timestamp">4 hours ago
+            </span><span class='story-footnote-tag-divider'>|</span> <a
               href="https://www.bbc.com/news/technology">Technology</a></span>
         </div>
         <hr>
         <div class="headline headline-box">
           <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35343093">Ask.fm reveals top teen
               slang</a></h2>
-          <span class='story-footnote-tag story-link mini-story-footnote'>3 hours ago <span
-              class='story-footnote-tag-divider'>|</span> <a
+          <span class='story-footnote-tag story-link mini-story-footnote'><span class="timestamp">3 hours ago
+            </span><span class='story-footnote-tag-divider'>|</span> <a
               href="https://www.bbc.com/news/technology">Technology</a></span>
         </div>
       </div>
       <hr>
-      <div class="headline">
-        <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35344843">Government urged to use
-            blockchain tech</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote'>2 hours ago <span
-            class='story-footnote-tag-divider'>|</span> <a
-            href="https://www.bbc.com/news/technology">Technology</a></span>
-      </div>
-      <hr>
-      <div class="headline">
-        <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35311456">Device makers face child
-            labour claims</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote'>19 January 2016 <span
-            class='story-footnote-tag-divider'>|</span> <a
-            href="https://www.bbc.com/news/technology">Technology</a></span>
-      </div>
-      <hr>
-      <div class="headline">
-        <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35343091">Friends Reunited website
-            to close</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote'>18 January 2016 <span
-            class='story-footnote-tag-divider'>|</span> <a
-            href="https://www.bbc.com/news/technology">Technology</a></span>
-      </div>
-      <hr>
-      <div class="headline">
-        <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35343561">Is the Bitcoin experiment
-            doomed?</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote'>7 hours ago <span
-            class='story-footnote-tag-divider'>|</span> <a
-            href="https://www.bbc.com/news/technology">Technology</a></span>
-      </div>
-      <hr>
-      <div class="headline">
-        <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/world-asia-35346822">Peshawar massacre video
-            game pulled</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote'>18 January 2016 <span
-            class='story-footnote-tag-divider'>|</span> <a href="http://www.bbc.co.uk/news/world/asia">Asia</a></span>
-      </div>
-      <hr>
-      <div class="headline">
-        <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35351158">Pakistan unblocks access
-            to YouTube</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote' id='last-mini-story-footnote'>18 January 2016
-          <span class='story-footnote-tag-divider'>|</span> <a
-            href="http://www.bbc.co.uk/news/world/asia">Asia</a></span>
+      <div id="mini-story-container">
+        <div class="headline" id='blockchain-headline'>
+          <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35344843">Government urged to use
+              blockchain tech</a></h2>
+          <span class='story-footnote-tag story-link mini-story-footnote'>2 hours ago <span
+              class='story-footnote-tag-divider'>|</span> <a
+              href="https://www.bbc.com/news/technology">Technology</a></span>
+        </div>
+        <hr>
+        <div class="headline" id='child-labour-headline'>
+          <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35311456">Device makers face
+              child
+              labour claims</a></h2>
+          <span class='story-footnote-tag story-link mini-story-footnote'>19 January 2016 <span
+              class='story-footnote-tag-divider'>|</span> <a
+              href="https://www.bbc.com/news/technology">Technology</a></span>
+        </div>
+        <hr>
+        <div class="headline" id='friends-reunited-headline'>
+          <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35343091">Friends Reunited
+              website
+              to close</a></h2>
+          <span class='story-footnote-tag story-link mini-story-footnote'>18 January 2016 <span
+              class='story-footnote-tag-divider'>|</span> <a
+              href="https://www.bbc.com/news/technology">Technology</a></span>
+        </div>
+        <hr>
+        <div class="headline" id='bitcoin-headline'>
+          <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35343561">Is the Bitcoin
+              experiment
+              doomed?</a></h2>
+          <span class='story-footnote-tag story-link mini-story-footnote'>7 hours ago <span
+              class='story-footnote-tag-divider'>|</span> <a
+              href="https://www.bbc.com/news/technology">Technology</a></span>
+        </div>
+        <hr>
+        <div class="headline" id='peshawar-headline'>
+          <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/world-asia-35346822">Peshawar massacre video
+              game pulled</a></h2>
+          <span class='story-footnote-tag story-link mini-story-footnote'>18 January 2016 <span
+              class='story-footnote-tag-divider'>|</span> <a href="http://www.bbc.co.uk/news/world/asia">Asia</a></span>
+        </div>
+        <hr>
+        <div class="headline" id='pakistan-headline'>
+          <h2 class='mini-story-caption'><a href="http://www.bbc.co.uk/news/technology-35351158">Pakistan unblocks
+              access
+              to YouTube</a></h2>
+          <span class='story-footnote-tag story-link mini-story-footnote' id='last-mini-story-footnote'>18 January 2016
+            <span class='story-footnote-tag-divider'>|</span> <a
+              href="http://www.bbc.co.uk/news/world/asia">Asia</a></span>
+        </div>
       </div>
       <hr>
     </section>
     <section id='ces'>
       <h2 id='ces-heading'><a href="https://www.bbc.com/news/technology-34739453">New tech at CES</a></h2>
-      <div class="iframe-wrapper">
-        <iframe width="100%" height="195" src="https://www.youtube.com/embed/V2BSv-BUowo" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3 class='ces-story'><a
-            href="https://www.bbc.com/news/av/technology-35259687/ces-2016-tv-plays-different-audio-to-two-viewers">TV
-            plays different audio to two viewers</a></h3>
+      <div class="desktop-wrapper">
+        <div class="iframe-wrapper">
+          <div class="iframe-container">
+            <iframe width="100%" height="195" src="https://www.youtube.com/embed/V2BSv-BUowo" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3 class='ces-story'><a
+              href="https://www.bbc.com/news/av/technology-35259687/ces-2016-tv-plays-different-audio-to-two-viewers">TV
+              plays different audio to two viewers</a></h3>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-container"><iframe width="100%" height="195"
+              src="https://www.youtube.com/embed/gkRRJ8Hyoq4" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3 class='ces-story'><a href="http://www.bbc.co.uk/news/technology-35258676">Case adds hardware modules to
+              phones</a></h3>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-container"><iframe width="100%" height="195"
+              src="https://www.youtube.com/embed/mC7E9lT7iiQ" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3 class='ces-story'><a href="http://www.bbc.co.uk/news/technology-35258680">BMW shows gesture-controlled
+              car</a></h3>
+        </div>
+        <div class="iframe-wrapper">
+          <div class="iframe-container"><iframe width="100%" height="195"
+              src="https://www.youtube.com/embed/C-9zaHcYaNM" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3 class='ces-story'><a href="http://www.bbc.co.uk/news/technology-35240062">BBC reporter breaks 'world's
+              safest' drone</a></h3>
+        </div>
       </div>
-      <div class="iframe-wrapper">
-        <iframe width="100%" height="195" src="https://www.youtube.com/embed/gkRRJ8Hyoq4" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3 class='ces-story'><a href="http://www.bbc.co.uk/news/technology-35258676">Case adds hardware modules to
-            phones</a></h3>
-      </div>
-      <div class="iframe-wrapper">
-        <iframe width="100%" height="195" src="https://www.youtube.com/embed/mC7E9lT7iiQ" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3 class='ces-story'><a href="http://www.bbc.co.uk/news/technology-35258680">BMW shows gesture-controlled
-            car</a></h3>
-      </div>
-      <div class="iframe-wrapper">
-        <iframe width="100%" height="195" src="https://www.youtube.com/embed/C-9zaHcYaNM" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3 class='ces-story'><a href="http://www.bbc.co.uk/news/technology-35240062">BBC reporter breaks 'world's
-            safest' drone</a></h3>
+    </section>
+    <hr>
+    <section id='watch-listen'>
+      <h2 id='watch-listen-heading'>Watch/Listen</h2>
+      <div class="desktop-wrapper">
+        <div class="headline watch-listen-headline">
+          <figure class='watch-listen-figure'>
+            <div class="iframe-container"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/OEa0BI-6hv8" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <h3 class='story-caption bunched-text'><a href="http://www.bbc.co.uk/programmes/p03fyd3z">UK science chief
+                  backs blockchains</a></h3><span class='story-footnote-tag story-link'><span class="timestamp">1 hour
+                  ago </span><span class='story-footnote-tag-divider'>|</span> <a
+                  href="https://www.bbc.com/news/technology">Technology</a></span>
+            </figcaption>
+          </figure>
+
+        </div>
+        <div class="headline watch-listen-headline">
+          <figure class='watch-listen-figure'>
+            <div class="iframe-container"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/GoxpO0Gy9k8" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <h3 class='story-caption bunched-text'><a href="http://www.bbc.co.uk/news/technology-35302125">Drone
+                  register gives 'accountability'</a></h3><span class='story-footnote-tag story-link'><span
+                  class="timestamp">18 January 2016 </span><span class='story-footnote-tag-divider'>|</span> <a
+                  href="https://www.bbc.com/news/technology">Technology</a></span>
+            </figcaption>
+          </figure>
+
+        </div>
+        <div class="headline watch-listen-headline">
+          <figure class='watch-listen-figure'>
+            <div class="iframe-container"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/Nd9ySTUVEMA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <h3 class='story-caption bunched-text'><a
+                  href="http://www.bbc.co.uk/news/science-environment-35340734">SpaceX rocket explodes during
+                  landing</a></h3><span class='story-footnote-tag story-link'><span class="timestamp">18 January 2016
+                </span><span class='story-footnote-tag-divider'>|</span> <a
+                  href="http://www.bbc.co.uk/news/science_and_environment">Science & Environment</a></span>
+            </figcaption>
+          </figure>
+
+        </div>
+        <div class="headline watch-listen-headline">
+          <figure class='watch-listen-figure'>
+            <div class="iframe-container"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/_wQTRMBAvzg" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <h3 class='story-caption bunched-text'><a href="http://www.bbc.co.uk/news/technology-35328636">What is a
+                  VPN service?</a></h3><span class='story-footnote-tag story-link'><span class="timestamp">18 January
+                  2016 </span><span class='story-footnote-tag-divider'>|</span> <a
+                  href="https://www.bbc.com/news/technology">Technology</a></span>
+            </figcaption>
+          </figure>
+
+        </div>
+        <div class="headline watch-listen-headline">
+          <figure class='watch-listen-figure'>
+            <div class="iframe-container"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/k0izgdFkuqc" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <h3 class='story-caption bunched-text'><a href="http://www.bbc.co.uk/news/technology-35302533">Charge your
+                  phone with a hand crank</a></h3><span class='story-footnote-tag story-link'><span class="timestamp">15
+                  January 2016 </span><span class='story-footnote-tag-divider'>|</span> <a
+                  href="https://www.bbc.com/news/technology">Technology</a></span>
+            </figcaption>
+          </figure>
+
+        </div>
+        <div class="headline watch-listen-headline">
+          <figure class='watch-listen-figure'>
+            <div class="iframe-container"><iframe width="560" height="315"
+                src="https://www.youtube.com/embed/2ac_RjtF7-Y" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <figcaption>
+              <h3 class='story-caption bunched-text'><a href="http://www.bbc.co.uk/news/technology-35222276">Drones
+                  break Guinness World Record</a></h3><span class='story-footnote-tag story-link'><span
+                  class="timestamp">15 January 2016 </span><span class='story-footnote-tag-divider'>|</span> <a
+                  href="https://www.bbc.com/news/technology">Technology</a></span>
+            </figcaption>
+          </figure>
+
+        </div>
+
       </div>
     </section>
     <hr>
     <section id='also'>
       <h2 id='also-heading'>Also in the News</h2>
-      <div class="headline also-story">
-        <img id='hawking-img' src="images/hawking.jpg" alt="Stephen Hawking">
-        <h2 class='mini-story-caption also-caption'><a href="http://www.bbc.co.uk/news/science-environment-35344664">
-            Hawking warns on 'own goal' disaster</a></h2>
-        <span class='story-footnote-tag  story-link mini-story-footnote'>19 January 2016 <span
-            class='story-footnote-tag-divider'>|</span> <a
-            href="http://www.bbc.co.uk/news/science_and_environment">Science & Environment</a></span>
-      </div>
-      <div class="headline also-story">
-        <img id='snoop-img' src="images/snoop.jpg" alt="Snoop Dogg">
-        <h2 class='mini-story-caption also-caption'><a href="http://www.bbc.co.uk/newsbeat/articles/35313618"><span
-              id='newsbeat-badge'>Newsbeat</span> Why Snoop was mad at Xbox</a></h2>
-        <span class='story-footnote-tag story-link mini-story-footnote'>14 January 2016 <span
-            class='story-footnote-tag-divider'>|</span> <a href="http://www.bbc.co.uk/newsbeat/home">Home</a></span>
+      <div class="desktop-wrapper">
+        <div class="headline also-story">
+          <div class="also-story-img"><img id='hawking-img' src="images/hawking.jpg" alt="Stephen Hawking"></div>
+          <div class="also-story-text">
+            <h2 class='mini-story-caption also-caption'><a
+                href="http://www.bbc.co.uk/news/science-environment-35344664">
+                Hawking warns on 'own goal' disaster</a></h2>
+            <span class='story-footnote-tag  story-link mini-story-footnote'><span class="timestamp">19 January 2016 </span><span
+                class='story-footnote-tag-divider'>|</span> <a
+                href="http://www.bbc.co.uk/news/science_and_environment">Science & Environment</a></span>
+          </div>
+        </div>
+        <div class="headline also-story">
+          <div class="also-story-img"><img id='snoop-img' src="images/snoop.jpg" alt="Snoop Dogg"></div>
+          <div class="also-story-text">
+            <h2 class='mini-story-caption also-caption'><a href="http://www.bbc.co.uk/newsbeat/articles/35313618"><span
+                  id='newsbeat-badge'>Newsbeat</span> Why Snoop was mad at Xbox</a></h2>
+            <span class='story-footnote-tag story-link mini-story-footnote'><span class="timestamp">14 January 2016 </span><span
+                class='story-footnote-tag-divider'>|</span> <a href="http://www.bbc.co.uk/newsbeat/home">Home</a></span>
+          </div>
+        </div>
       </div>
     </section>
     <hr>
