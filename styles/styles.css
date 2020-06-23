@@ -1423,6 +1423,7 @@ footer p a:hover {
 #secondary-footer-heading {
   padding-top: 24px;
   margin-top: 0;
+  margin-bottom: 6px;
 }
 
 article {
@@ -1445,7 +1446,7 @@ article h2 {
 }
 
 .news-services-list-item {
-  padding-left: 36px;
+  padding-left: 42px;
   padding-bottom: 22px;
   font-weight: 700;
   line-height: 1.28571;
@@ -3100,6 +3101,39 @@ article h2 {
     left: -34%;
   }
 
+  #secondary-footer {
+    padding: 24px 16px;
+  }
+
+  #secondary-footer ul {
+    padding-bottom: 0;
+    position: relative;
+    overflow: auto;
+  }
+
+  #secondary-footer ul li {
+    float: left;
+    width: 25%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 16px;
+    margin-top: 16px;
+    text-align: left;
+  }
+
+  #secondary-footer ul li a {
+    padding-left: 30px;
+    display: block;
+  }
+
+  #secondary-footer-heading {
+    padding-top: 0;
+    margin-left: 0;
+    font-size: 24px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
 }
 
 @media only screen and (min-width: 635px) {
@@ -3357,6 +3391,10 @@ article h2 {
     max-width: 31.9%;
   }
 
+  #secondary-footer {
+    padding-left: 2.5%;
+  }
+
 }
 
 @media only screen and (min-width: 909px) {
@@ -3440,6 +3478,10 @@ article h2 {
 
   #main-podcast figure figcaption {
     top: 85%;
+  }
+
+  #secondary-footer ul li {
+    text-align: center;
   }
 
 }
@@ -4369,6 +4411,14 @@ article h2 {
     padding-top: 4px;
   }
 
+  #secondary-footer ul li a {
+    padding-top: 6px;
+  }
+
+  #secondary-footer {
+    padding-left: 3%;
+  }
+
 }
 
 
@@ -4816,6 +4866,11 @@ article h2 {
 
   .more-wrapper > .headline {
     margin-left: 0;
+  }
+
+  #secondary-footer {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
 }
